@@ -72,63 +72,65 @@ export function MyForm({ tableRows, setTableRows }) {
   return (
     <form className="container" onSubmit={handleSubmit}>
       <div className="formHeader">
-        <h1>Plan</h1>
-        <div className="divider"></div>
-        <h1>Spent</h1>
+        <div className="positHeader">
+          <h1>Plan</h1>
+          <div className="divider"></div>
+          <h1>Spent</h1>
+        </div>
       </div>
 
-      <label>
-        <h4>Date</h4>
+      <label><h4>Date</h4></label>
+      <div className="inputContainer">
         <input
           id="date"
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-      </label>
+      </div>
       
-      <label>
-        <h4>Total Money</h4>
+      <label><h4>Total Money</h4></label>
+      <div className="inputContainer">
         <input
           className="full-width"
           type="number"
           value={totalM}
           onChange={(e) => setTotalM(Number(e.target.value))}
         />
-      </label>
+      </div>
 
-      <label>
-        <h4>Rent</h4>
+      <label><h4>Rent</h4></label>
+      <div className="inputContainer">
         <input
           className="full-width"
           type="number"
           value={rent}
           onChange={(e) => setRent(Number(e.target.value))}
         />
-      </label>
+      </div>
       
-      <label >
-        <h4>Medical</h4>
+      <label><h4>Medical</h4></label>
+      <div className="inputContainer">
         <input
           className="full-width"
           type="number"
           value={medical}
           onChange={(e) => setMedical(Number(e.target.value))}
         />
-      </label>
+      </div>
       
-      <label>
-        <h4>Savings</h4>
+      <label><h4>Savings</h4></label>
+      <div className="inputContainer">
         <input
           className="full-width"
           type="number"
           value={savings}
           onChange={(e) => setSavings(Number(e.target.value))}
         />
-      </label>
+      </div>
 
-      <label>
-        <h4>Utilities</h4>
+      <label><h4>Utilities</h4></label>
+      <div className="inputContainer">
         <input
           className="smaller-width"
           type="number"
@@ -141,10 +143,10 @@ export function MyForm({ tableRows, setTableRows }) {
           value={utilitiesSpent}
           onChange={(e) => setUtilitiesSpent(Number(e.target.value))}
         />
-      </label>
+      </div>
       
-      <label>
-        <h4>Food</h4>
+      <label><h4>Food</h4></label>
+      <div className="inputContainer">
         <input
           className="smaller-width"
           type="number"
@@ -157,32 +159,30 @@ export function MyForm({ tableRows, setTableRows }) {
           value={foodSpent}
           onChange={(e) => setFoodSpent(Number(e.target.value))}
         />
-      </label>
-      
+      </div>
 
-      
-      <label>
-        <h4>WIFI & Mobile</h4>
+      <label><h4>WIFI & Mobile</h4></label>
+      <div className="inputContainer">
         <input
           className="full-width"
           type="number"
           value={wifiMobile}
           onChange={(e) => setWifiMobile(Number(e.target.value))}
         />
-      </label>
+      </div>
       
-      <label>
-        <h4>Bus</h4>
+      <label><h4>Bus</h4></label>
+      <div className="inputContainer">
         <input
           className="full-width"
           type="number"
           value={bus}
           onChange={(e) => setBus(Number(e.target.value))}
         />
-      </label>
+      </div>
       
-      <label>
-        <h4>Gobox</h4>
+      <label><h4>Gobox</h4></label>
+      <div className="inputContainer">
         <input
           className="smaller-width"
           type="number"
@@ -195,10 +195,10 @@ export function MyForm({ tableRows, setTableRows }) {
           value={goboxSpent}
           onChange={(e) => setGoboxSpent(Number(e.target.value))}
         />
-      </label>
+      </div>
       
-      <label>
-        <h4>Other (Planned)</h4>
+      <label><h4>Other (Planned)</h4></label>
+      <div className="inputContainer">
         <input
           className="smaller-width"
           type="number"
@@ -211,28 +211,22 @@ export function MyForm({ tableRows, setTableRows }) {
           value={otherpSpent}
           onChange={(e) => setOtherPSpent(Number(e.target.value))}
         />
-      </label>
+      </div>
 
-
-
-
-      <label>
-        <h4>Other (Unplanned)</h4>
+      <label><h4>Other (Unplanned)</h4></label>
+      <div className="inputContainer">
         <input
-          className="left"
+          className="smaller-width right"
           type="number"
           value={otheru}
           onChange={(e) => setOtherU(Number(e.target.value))}
         />
-      </label>
+      </div>
       
       <button className="button" type="submit">Submit</button>
     </form>
   );
 }
-
-
-
 
   export function Create({ tableRows, setTableRows }) {
   return (
