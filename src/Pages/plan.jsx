@@ -1,5 +1,13 @@
-export function Plan({ tableRows }) {
-   console.log(tableRows); 
+import { useState, useEffect } from "react";
+
+export function Plan() {
+  const [tableRows, setTableRows] = useState([]);
+
+  useEffect(() => {
+    const savedRows = JSON.parse(localStorage.getItem("budgetData")) || [];
+    setTableRows(savedRows);
+  }, []);
+
   return (
     <>
       <div className="horizontal-scroll">
@@ -34,7 +42,7 @@ export function Plan({ tableRows }) {
                 <td>{row.bus}</td>
                 <td>{row.goboxPlan}</td>
                 <td>{row.otherpPlan}</td>
-                <td>{row.leftPlan.toFixed(2)}</td>
+                <td>{row.leftPlan?.toFixed(2)}</td>
               </tr>
             ))}
           </tbody>
