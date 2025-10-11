@@ -161,7 +161,7 @@ export function MyForm({ tableRows, setTableRows }) {
         />
       </div>
 
-      <label><h4>WIFI & Mobile</h4></label>
+      <label><h4>Internet</h4></label>
       <div className="inputContainer">
         <input
           className="full-width"
