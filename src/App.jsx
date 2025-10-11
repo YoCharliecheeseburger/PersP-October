@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout";
 import { Home } from "./Pages/home";
@@ -8,7 +8,13 @@ import { Plan } from "./Pages/plan";
 import { Spent } from "./Pages/spent";
 
 function App() {
-  const [tableRows, setTableRows] = useState([]);
+  const [tableRows, setTableRows] = useState(() => {
+    return JSON.parse(localStorage.getItem("budgetData")) || [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("budgetData", JSON.stringify(tableRows));
+  }, [tableRows]);
 
   return (
     <Router>

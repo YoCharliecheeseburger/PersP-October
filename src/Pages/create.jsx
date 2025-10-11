@@ -49,7 +49,11 @@ export function MyForm({ tableRows, setTableRows }) {
     };
 
 
-    setTableRows([...tableRows, newRow]);
+    const updatedRows = [...tableRows, newRow];
+
+    setTableRows(updatedRows);
+
+    localStorage.setItem("budgetData", JSON.stringify(updatedRows));
 
     setDate("");
     setTotalM("");

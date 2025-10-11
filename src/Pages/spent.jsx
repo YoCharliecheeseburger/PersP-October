@@ -1,13 +1,4 @@
-import { useState, useEffect } from "react";
-
-export function Spent() {
-  const [tableRows, setTableRows] = useState([]);
-
-  useEffect(() => {
-    const savedRows = JSON.parse(localStorage.getItem("budgetData")) || [];
-    setTableRows(savedRows);
-  }, []);
-  
+export function Spent({tableRows}) {
   return (
     <>
       <div className="horizontal-scroll">
