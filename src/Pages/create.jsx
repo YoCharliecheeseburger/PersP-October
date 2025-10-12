@@ -226,8 +226,13 @@ export function MyForm({ tableRows, setTableRows }) {
           onChange={(e) => setOtherU(Number(e.target.value))}
         />
       </div>
-      
-      <button className="button" type="submit">Submit</button>
+
+      <div className="solulutomydelulu">
+        <button className="submitForm" type="submit">
+        Submit 
+      </button>
+      <span className="submitButtonText">Submit Form!</span>
+      </div>
     </form>
   );
 }
