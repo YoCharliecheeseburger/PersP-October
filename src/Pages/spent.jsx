@@ -1,6 +1,7 @@
 export function Spent({tableRows}) {
   return (
     <>
+    <div className="tablePos">
       <div className="horizontal-scroll">
         <table>
           <thead>
@@ -41,6 +42,7 @@ export function Spent({tableRows}) {
           </tbody>
         </table>
       </div>
+    </div>
     </>
   );
 }

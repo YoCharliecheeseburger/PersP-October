@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { Plan } from "../Pages/plan"
+import { Spent } from "../Pages/spent"
 
-
-export function Home() {
+export function Home({ tableRows }) {
   return (
-    <>
-      <h1>this is Home</h1>
-    </>
+    <div className="tablePosHome">
+      <div className="tableBox">
+        <Plan tableRows={tableRows}/>
+        <h1>Plan Chart</h1>
+      </div>
+      <div className="tableBox">
+        <Spent tableRows={tableRows}/>
+        <h1>Spent Chart</h1>
+      </div>
+    </div>
   );
 }

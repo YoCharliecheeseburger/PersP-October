@@ -1,6 +1,7 @@
 export function Plan({tableRows}) {
   return (
     <>
+    <div className="tablePos">
       <div className="horizontal-scroll">
         <table>
           <thead>
@@ -39,6 +40,7 @@ export function Plan({tableRows}) {
           </tbody>
         </table>
       </div>
+    </div>
     </>
   );
 }

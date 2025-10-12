@@ -20,7 +20,7 @@ function App() {
     <Router>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home tableRows={tableRows}/>} />
           <Route
             path="/create"
             element={<Create tableRows={tableRows} setTableRows={setTableRows} />}

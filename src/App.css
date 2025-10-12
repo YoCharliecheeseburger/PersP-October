@@ -298,12 +298,25 @@ tbody > tr:nth-of-type(odd) {
   background-color: rgb(206, 206, 206);
 }
 
-.horizontal-scroll {
+.tablePosHome {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.horizontal-scroll, .tableBox{
   overflow-x: auto;
   transform: rotateX(180deg);
 }
 
-.horizontal-scroll table {
+.horizontal-scroll table,
+.tableBox > :nth-child(1) {
+  transform: rotateX(180deg);
+}
+
+.tableBox h1 {
   transform: rotateX(180deg);
 }
 
