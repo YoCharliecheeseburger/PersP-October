@@ -9,7 +9,7 @@ body {
 
 /* the lil pop up for settings and Submit button*/
 
-.solulutomydelulu {
+.solulutomydelulu { /*This one is for Create, rest of the code is for both*/
   display: inline-block;
   position: relative;
   margin: 0 auto;
